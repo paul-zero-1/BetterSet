@@ -83,7 +83,7 @@ export default class BetterSet extends Set {
     equals (otherSet) {
       if (this === otherSet) {
         return true
-      } else if (!(otherSet instanceof BetterSet) || this.size !== otherSet.size) {
+      } else if ((otherSet instanceof BetterSet) || this.size !== otherSet.size) {
         return false
       } else {
         for (let value of this.values()) {
